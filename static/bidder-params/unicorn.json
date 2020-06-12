@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "UNICORN Adapter Params",
+    "description": "A schema which validates params accepted by the UNICORN adapter",
+    "type": "object",
+    "properties": {
+      "placement_id": {
+        "type": "string",
+        "description": "Placement ID"
+      },
+      "account_id": {
+        "type": "integer",
+        "description": "Account ID for charge request",
+        "minimum": 0
+      },
+      "publisher_id": {
+        "type": "string",
+        "description": "Account specific publisher ID"
+      },
+      "media_id": {
+        "type": "string",
+        "description": "Publisher specific media ID"
+      }
+    },
+  "required": ["placement_id", "account_id"]
+}
